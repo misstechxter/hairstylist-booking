@@ -1,5 +1,3 @@
-import React from "react";
-
-export default function AdminPage(): JSX.Element {
-  return <div>Admin page</div>;
+export default function AdminPage() {
+  return <div>Admin</div>;
 }
