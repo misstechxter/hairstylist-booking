@@ -3,39 +3,39 @@ import { Scissors } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#a38076] flex flex-col items-center justify-center p-6 text-white text-center">
-      <div className="max-w-md w-full">
-        {/* Brand Logo/Icon */}
-        <div className="mb-8">
-          <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto border-2 border-white/20 mb-4">
-            <Scissors className="text-white w-10 h-10" />
-          </div>
-          <h1 className="font-[family-name:--font-brand] text-5xl italic uppercase font-black tracking-tighter">
-            Tresseallure
-          </h1>
-          <p className="text-[10px] font-black tracking-[0.4em] opacity-60 uppercase mt-2">
-            Luxury Braiding & Installs
-          </p>
+    <div className="booking-paper flex flex-col">
+      {/* Cheetah Header Area */}
+      <div className="cheetah-texture h-48 flex flex-col items-center justify-center border-b-4 border-[#2d221e]">
+        <div className="bg-white/90 p-4 rounded-full mb-2 shadow-lg">
+          <Scissors className="text-[#a38076] w-10 h-10" />
+        </div>
+        <h1 className="font-black text-4xl italic uppercase tracking-tighter text-white drop-shadow-md">
+          Tresseallure
+        </h1>
+      </div>
+
+      <div className="p-8 flex-1 flex flex-col justify-center gap-6">
+        <div className="text-center">
+          <p className="text-[10px] font-black tracking-[0.4em] text-zinc-400 uppercase mb-2">Houston, Texas</p>
+          <h2 className="text-xl font-bold text-zinc-800 uppercase italic">Welcome to the Gallery</h2>
         </div>
 
-        {/* Action Button */}
         <Link 
           href="/book" 
-          className="block w-full bg-white text-[#a38076] py-5 rounded-2xl font-black text-xs tracking-[0.3em] uppercase shadow-2xl hover:scale-[1.02] active:scale-95 transition-all"
+          className="cheetah-texture w-full py-6 rounded-lg text-center font-black text-sm tracking-[0.3em] uppercase shadow-xl hover:scale-[1.02] transition-transform active:scale-95"
         >
           Book Appointment
         </Link>
 
-        {/* Secondary Links */}
-        <div className="mt-8 grid grid-cols-2 gap-4">
-          <Link href="/policies" className="text-[10px] font-black uppercase tracking-widest opacity-40 hover:opacity-100">
+        <div className="grid grid-cols-2 gap-4">
+          <Link href="/policies" className="text-center py-4 bg-zinc-50 border border-zinc-100 rounded font-bold text-[10px] uppercase tracking-widest text-zinc-500">
             Policies
           </Link>
-          <Link href="/admin" className="text-[10px] font-black uppercase tracking-widest opacity-40 hover:opacity-100">
-            Stylist Login
+          <Link href="/admin" className="text-center py-4 bg-zinc-50 border border-zinc-100 rounded font-bold text-[10px] uppercase tracking-widest text-zinc-500">
+            Stylist
           </Link>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
